@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Show me my viewport</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #e3e2df;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <section class="content-box">
+        <p>Your viewport width: <span id="viewport_width"></span></p>
+        <p>Your viewport height: <span id="viewport_height"></span></p>
+    </section>
+    <script>
+        document.querySelector('#viewport_width').innerHTML = window.innerWidth;
+        document.querySelector('#viewport_height').innerHTML = window.innerHeight;
+    </script>
+</body>
+</html>
