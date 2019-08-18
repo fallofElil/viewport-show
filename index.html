@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,14 +14,24 @@
         }
     </style>
 </head>
+
 <body>
     <section class="content-box">
         <p>Your viewport width: <span id="viewport_width"></span></p>
         <p>Your viewport height: <span id="viewport_height"></span></p>
     </section>
     <script>
-        document.querySelector('#viewport_width').innerHTML = window.innerWidth;
-        document.querySelector('#viewport_height').innerHTML = window.innerHeight;
+        var vpWidth = document.querySelector('#viewport_width')
+        var vpHeight = document.querySelector('#viewport_height')
+
+        vpWidth.innerHTML = window.innerWidth;
+        vpHeight.innerHTML = window.innerHeight;
+
+        window.addEventListener('orientationchange', function () {
+            vpWidth.innerHTML = window.innerWidth;
+            vpHeight.innerHTML = window.innerHeight;
+        });
     </script>
 </body>
+
 </html>
