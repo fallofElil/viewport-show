@@ -1,1 +1,3 @@
-"# viewport-show" 
+# Shoe me my vieport sizes!
+
+It does what it called...
